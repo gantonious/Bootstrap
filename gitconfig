@@ -1,0 +1,24 @@
+[alias]
+	a = add
+	b = branch
+	c = commit
+	cm = commit -m
+	cam = commit -am
+	ca = commit --amend
+	d = diff
+	m = merge
+	r = reset
+	rh = reset --hard
+	rb = rebase
+	rbi = rebase -i
+	s = status
+	st = stash
+	stp = stash pop
+	co = checkout
+	com = checkout master
+	cob = checkout -b
+	f = fetch
+	fap = fetch --all --prune
+	trim = !git pull && git fap && git branch -vv | awk '$4 ~/gone]/ {print $1}'| xargs git branch -d
+	l = log
+    la = "!git config -l | grep alias | cut -c 7-"
