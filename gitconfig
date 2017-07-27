@@ -20,5 +20,6 @@
 	f = fetch
 	fap = fetch --all --prune
 	trim = !git pull && git fap && git branch -vv | awk '$4 ~/gone]/ {print $1}'| xargs git branch -d
+	axe = !git pull && git fap && git branch -vv | awk '$4 ~/gone]/ {print $1}'| xargs git branch -D
 	l = log
 	la = "!git config -l | grep alias | cut -c 7-"
