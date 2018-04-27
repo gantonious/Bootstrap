@@ -22,7 +22,7 @@ class ConfigBootstraper
         CONFIG_MAP.each do |config_type, config_destination|
             if Environment.exists? "config/#{config_type}"
                 Environment.copy_file("config/#{config_type}", config_destination)
-                ShellUiKit.print "Moved #{config_type} to #{config_destination} ✅"
+                ShellUiKit.print "Moved #{config_type} to #{config_destination} ✈️"
             end
         end
     end

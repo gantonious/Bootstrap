@@ -21,7 +21,7 @@ class GemBootstraper
         gems = Environment.load_as_list(GEM_FILE)
         for gem in gems do
             if Gem.installed? gem
-                ShellUiKit.print "#{gem} already satisfied ✅"
+                ShellUiKit.print "#{gem} already satisfied 💎"
             else
                 ShellUiKit.print "Could not find #{gem} ❌"
                 Gem.install gem
