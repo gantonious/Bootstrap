@@ -1,3 +1,5 @@
+require_relative '../../core/Shell'
+
 module Brew
     def self.installed?(name)
         Shell.run_silently "brew list | grep -w #{name}"

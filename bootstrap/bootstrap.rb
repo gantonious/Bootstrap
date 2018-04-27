@@ -1,9 +1,12 @@
-module Shell
-    def self.run_silently(command)
-        system "#{command} >> /dev/null"
-    end
+require_relative "core/Environment"
+require_relative "core/Pipeline"
+require_relative "plugins/homebrew/bootstrap.rb"
 
-    def self.run(command)
-        system command
-    end
-end
+Environment.use_path "./environment"
+
+bootstrappers = [
+    BrewBootstraper.new
+]
+
+pipeline = BootstrapPipeline.new(bootstrappers)
+pipeline.run
