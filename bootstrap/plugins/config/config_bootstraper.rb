@@ -1,6 +1,5 @@
 require_relative '../../core/Environment'
 require_relative '../../core/ShellUiKit'
-require_relative '../../core/Shell'
 
 class ConfigBootstraper
     CONFIG_MAP = {
