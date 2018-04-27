@@ -5,7 +5,8 @@ class ConfigBootstraper
     CONFIG_MAP = {
         "gitconfig" => "~/.gitconfig",
         "zshrc" => "~/.zshrc",
-        "bashprofile" => "~/.bash_profile"
+        "bashprofile" => "~/.bash_profile",
+        "vscode" => "~/Library/Application\\ Support/Code/User/settings.json"
     }
 
     def name
