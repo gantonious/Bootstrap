@@ -7,7 +7,7 @@ class BootstrapPipeline
 
     def run
         for bootstraper in @bootstrapers do
-            ShellUiKit.print_title "Bootstraping #{bootstraper.name}..."                
+            ShellUiKit.print_header "Bootstraping #{bootstraper.name}..."                
             
             if bootstraper.can_bootstrap?
                 bootstraper.bootstrap

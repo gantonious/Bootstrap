@@ -1,20 +1,34 @@
 require_relative '../../core/Shell'
 
 module Brew
-    def self.installed?(name)
-        Shell.run_silently "brew list | grep -w #{name}"
+    def self.installed?
+        Shell.run_silently "brew -v"
     end
 
-    def self.not_installed?(name)
-        !self.installed?(name)
+    def self.not_installed?
+        !self.installed?
     end
 
-    def self.install(name)
-        Shell.run "brew install #{name}"
+    def self.install
+        Shell.run '/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
     end
 
-    def self.uninstall(name)
-        Shell.run "brew uninstall #{name}"
+    module Formulas
+        def self.installed?(name)
+            Shell.run_silently "brew list | grep -w #{name}"
+        end
+
+        def self.not_installed?(name)
+            !self.installed?(name)
+        end
+
+        def self.install(name)
+            Shell.run "brew install #{name}"
+        end
+
+        def self.uninstall(name)
+            Shell.run "brew uninstall #{name}"
+        end
     end
 
     module Cask
