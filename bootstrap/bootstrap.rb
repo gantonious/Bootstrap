@@ -5,13 +5,15 @@ require_relative 'plugins/gem/gem_bootstraper'
 require_relative 'plugins/vscode/code_bootstraper'
 require_relative 'plugins/ohmyzsh/ohmyzsh_bootstraper'
 require_relative 'plugins/config/config_bootstraper'
+require_relative 'plugins/defaults/defaults_bootstraper'
 
 bootstrappers = [
     BrewBootstraper.new,
     GemBootstraper.new,
     CodeBootstraper.new,
     OhMyZshBootstraper.new,
-    ConfigBootstraper.new
+    ConfigBootstraper.new,
+    DefaultsBootstraper.new
 ]
 
 Environment.use_path './environment'

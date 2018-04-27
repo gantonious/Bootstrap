@@ -10,6 +10,11 @@ module Environment
         "#{@@environment_path}/#{file}"
     end
 
+    def self.files_in(folder_path)
+        Dir.entries(resolve_path_for(folder_path))
+           .select {|f| !File.directory? f}
+    end
+
     def self.exists?(file)
         File.exist? resolve_path_for(file)
     end
