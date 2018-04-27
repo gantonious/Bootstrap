@@ -1,3 +1,6 @@
+require 'fileutils'
+require_relative 'Shell'
+
 module Environment
     def self.use_path(environment_path)
         @@environment_path = environment_path
@@ -14,5 +17,9 @@ module Environment
     def self.load_as_list(file)
         File.read(resolve_path_for(file))
             .split("\n")
+    end
+
+    def self.copy_file(from, to)
+        Shell.run "cp #{resolve_path_for(from)} #{to}"
     end
 end
