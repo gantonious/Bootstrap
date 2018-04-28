@@ -1,5 +1,5 @@
-require_relative 'gem'
-require_relative '../../core/ShellUiKit'
+require 'bootstrap/plugins/gem/gem'
+require 'bootstrap/core/shell_ui_kit'
 
 class GemBootstraper
     GEM_FILE = "gem/gems"

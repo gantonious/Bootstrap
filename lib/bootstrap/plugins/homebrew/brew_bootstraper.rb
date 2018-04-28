@@ -1,6 +1,6 @@
-require_relative './brew'
-require_relative '../../core/Environment'
-require_relative '../../core/ShellUiKit'
+require 'bootstrap/plugins/homebrew/brew'
+require 'bootstrap/core/environment'
+require 'bootstrap/core/shell_ui_kit'
 
 class BrewBootstraper
     CASK_FILE = "homebrew/cask"

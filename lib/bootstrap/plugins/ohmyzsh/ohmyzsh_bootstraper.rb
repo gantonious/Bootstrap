@@ -1,5 +1,5 @@
-require_relative 'ohmyzsh'
-require_relative '../../core/ShellUiKit'
+require 'bootstrap/plugins/ohmyzsh/ohmyzsh'
+require 'bootstrap/core/shell_ui_kit'
 
 class OhMyZshBootstraper
     def name

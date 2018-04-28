@@ -1,5 +1,5 @@
 require 'fileutils'
-require_relative 'Shell'
+require 'bootstrap/core/shell'
 
 module Environment
     def self.use_path(environment_path)

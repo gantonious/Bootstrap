@@ -1,6 +1,6 @@
-require_relative 'code'
-require_relative '../../core/Environment'
-require_relative '../../core/ShellUiKit'
+require 'bootstrap/plugins/vscode/code'
+require 'bootstrap/core/environment'
+require 'bootstrap/core/shell_ui_kit'
 
 class CodeBootstraper
     EXTENSIONS_FILE = "code/extensions"

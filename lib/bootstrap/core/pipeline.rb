@@ -1,4 +1,4 @@
-require_relative 'ShellUiKit.rb'
+require 'bootstrap/core/shell_ui_kit'
 
 class BootstrapPipeline
     def initialize(bootstrapers)
@@ -7,11 +7,11 @@ class BootstrapPipeline
 
     def run
         for bootstraper in @bootstrapers do
-            ShellUiKit.print_header "Bootstraping #{bootstraper.name}..."                
-            
+            ShellUiKit.print_header "Bootstraping #{bootstraper.name}..."
+
             if bootstraper.can_bootstrap?
                 bootstraper.bootstrap
-            else  
+            else
                 ShellUiKit.print "Nothing to bootstrap."
             end
         end

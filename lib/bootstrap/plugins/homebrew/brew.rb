@@ -1,4 +1,4 @@
-require_relative '../../core/Shell'
+require 'bootstrap/core/shell'
 
 module Brew
     def self.installed?
@@ -35,7 +35,7 @@ module Brew
         def self.installed?(cask_name)
             Shell.run_silently "brew cask list | grep -w #{cask_name}"
         end
-    
+
         def self.not_installed?(cask_name)
             !self.installed?(cask_name)
         end

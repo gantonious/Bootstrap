@@ -1,4 +1,4 @@
-require_relative '../../core/Shell'
+require 'bootstrap/core/shell'
 
 module Gem
     def self.installed?(name)

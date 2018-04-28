@@ -1,6 +1,6 @@
-require_relative 'defaults'
-require_relative '../../core/Environment'
-require_relative '../../core/ShellUiKit'
+require 'bootstrap/plugins/defaults/defaults'
+require 'bootstrap/core/environment'
+require 'bootstrap/core/shell_ui_kit'
 
 class DefaultsBootstraper
     def name
@@ -16,7 +16,7 @@ class DefaultsBootstraper
 
         for domain in domains do
             Defaults.import(domain, Environment.resolve_path_for("defaults/#{domain}"))
-            ShellUiKit.print "Imported defaults for #{domain} 🚀" 
+            ShellUiKit.print "Imported defaults for #{domain} 🚀"
         end
     end
 end
