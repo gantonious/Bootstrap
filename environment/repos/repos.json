@@ -12,6 +12,22 @@
         {
             "cloneFrom" : "https://github.com/gantonious/MaterialDayPicker",
             "cloneTo" : "android/MaterialDayPicker"
+        },
+        {
+            "cloneFrom" : "https://github.com/strawberry-jam/tripod-android-app",
+            "cloneTo" : "tripods/tripod-android-app"
+        },
+        {
+            "cloneFrom" : "https://github.com/strawberry-jam/tripod-ios-app.git",
+            "cloneTo" : "tripods/tripod-ios-app"
+        },
+        {
+            "cloneFrom" : "https://github.com/strawberry-jam/tripod-server",
+            "cloneTo" : "tripods/tripod-server"
+        },
+        {
+            "cloneFrom" : "https://github.com/gantonious/gantonious.github.io.git",
+            "cloneTo" : "websites/gantonious.github.io"
         }
     ]
 }

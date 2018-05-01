@@ -28,7 +28,7 @@ class ReposBootstraper
         git_url = project['cloneFrom']
         project_dir = project['cloneTo']
         destination_dir = base_clone_dir + project_dir
-        if File.directory?("~/" + destination_dir)
+        if File.directory?("#{Dir.home}/#{destination_dir}")
             ShellUiKit.print "#{project_dir} already cloned 🦄"
         else
             ShellUiKit.print_title "Cloning #{git_url}"
