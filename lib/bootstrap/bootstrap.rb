@@ -6,6 +6,7 @@ require 'bootstrap/plugins/vscode/code_bootstraper'
 require 'bootstrap/plugins/ohmyzsh/ohmyzsh_bootstraper'
 require 'bootstrap/plugins/config/config_bootstraper'
 require 'bootstrap/plugins/defaults/defaults_bootstraper'
+require 'bootstrap/plugins/repos/repos_bootstraper'
 
 bootstrappers = [
     BrewBootstraper.new,
@@ -13,7 +14,8 @@ bootstrappers = [
     CodeBootstraper.new,
     OhMyZshBootstraper.new,
     ConfigBootstraper.new,
-    DefaultsBootstraper.new
+    DefaultsBootstraper.new,
+    ReposBootstraper.new
 ]
 
 Environment.use_path './environment'

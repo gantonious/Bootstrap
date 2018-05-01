@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'json'
 require 'bootstrap/core/shell'
 
 module Environment
@@ -22,6 +23,11 @@ module Environment
     def self.load_as_list(file)
         File.read(resolve_path_for(file))
             .split("\n")
+    end
+
+    def self.load_as_json(file)
+        raw_file = File.read(resolve_path_for(file))
+        JSON.parse(raw_file)
     end
 
     def self.copy_file(from, to)

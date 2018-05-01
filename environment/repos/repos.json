@@ -1,0 +1,17 @@
+{
+    "cloneReposTo" : "dev/",
+    "repos" : [
+        {
+            "cloneFrom" : "https://github.com/tophernuts/JobberSmartAssistant.git",
+            "cloneTo" : "JobberSmartAssistant"
+        },
+        {
+            "cloneFrom" : "https://github.com/gantonious/ViewCellAdapter",
+            "cloneTo" : "android/ViewCellAdapter"
+        },
+        {
+            "cloneFrom" : "https://github.com/gantonious/MaterialDayPicker",
+            "cloneTo" : "android/MaterialDayPicker"
+        }
+    ]
+}
