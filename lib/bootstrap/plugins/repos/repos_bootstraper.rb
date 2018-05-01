@@ -28,6 +28,7 @@ class ReposBootstraper
         git_url = project['cloneFrom']
         project_dir = project['cloneTo']
         destination_dir = base_clone_dir + project_dir
+        # THIS IS A HACK PLES FIX PATH JOINING OMG
         if File.directory?("#{Dir.home}/#{destination_dir}")
             ShellUiKit.print "#{project_dir} already cloned 🦄"
         else
