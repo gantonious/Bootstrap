@@ -28,6 +28,14 @@
         {
             "cloneFrom" : "https://github.com/gantonious/gantonious.github.io.git",
             "cloneTo" : "websites/gantonious.github.io"
+        },
+        {
+            "cloneFrom" : "https://github.com/snackthyme/pvpuino.git",
+            "cloneTo" : "pvpuino"
+        },
+        {
+            "cloneFrom" : "https://github.com/gantonious/c275-enthalpy",
+            "cloneTo" : "enthalPy"
         }
     ]
 }
